@@ -14,6 +14,7 @@
 # [Aa]ssets/AssetStoreTools*
 /[Aa]ssets/LeanTween/
 /PuzzleDemo/
+/[Aa]ssets/TextMesh Pro/
 
 # Visual Studio cache directory
 .vs/

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TileController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class TileController : MonoBehaviour
     public int moves = 0;
 
     public GameObject timer;
+    [SerializeField] public TextMeshProUGUI uiMoveText;
 
     // List to store the instantiated tiles
     private List<GameObject> tiles = new List<GameObject>();
@@ -24,6 +26,8 @@ public class TileController : MonoBehaviour
         GenerateTiles();
 
         ResetTiles();
+
+        uiMoveText.text = $"{moves}";
     }
 
     public void ResetTiles()
@@ -87,7 +91,7 @@ public class TileController : MonoBehaviour
             SetTileStatus(tiles[downIndex], !tileon_status);
         }
         moves++;
-
+        uiMoveText.text = $"{moves}";
     }
 
 

@@ -174,7 +174,7 @@ public class TileController : MonoBehaviour
             Debug.Log("Finish");
             gameOver = true;
 
-            timer.gameObject.GetComponent<Timer>().OnPause();
+            timer.GetComponent<Timer>().OnPause();
         }
     }
 

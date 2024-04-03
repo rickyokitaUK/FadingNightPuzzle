@@ -7,10 +7,6 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public void OnPause()
-    {
-        Pause = !Pause;
-    }
 
     [SerializeField] public Image uiFill;
     [SerializeField] public TextMeshProUGUI uiText;
@@ -31,6 +27,11 @@ public class Timer : MonoBehaviour
     {
         remainingDuration = Second;
         StartCoroutine(UpdateTimer());
+    }
+
+    public void OnPause()
+    {
+        Pause = true;
     }
 
     private IEnumerator UpdateTimer()
